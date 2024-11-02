@@ -1,0 +1,31 @@
+<h1>hello work</h1>
+
+<div *ngIf="DeleteHero; else nothingWasDelete" > <!-- este nos permite que el "heroe borrado" solo aparezca si es verdadero, de lo contrario nose mostrara -->
+
+<h3>heroe borrado: <small class="text-danger"> {{ DeleteHero }} </small></h3>
+
+</div>
+
+<ng-template #nothingWasDelete>
+  <h3>no ha borrado nada.</h3>
+</ng-template>
+
+
+
+
+<!-- el ngFor nos permite crear una lista donde se causa en el ts y se genera en el html
+  -->
+
+<!-- el ngif  -->
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removelastHero()"
+  class="btn btn-outline-danger">
+  borrar el ultimo heroe
+</button>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroNames "
+   class="list-group-item"> {{name}} </li>
+
+</ul>
