@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-/* import { CommonModule } from '@angular/common'; */
+import { CommonModule } from '@angular/common';
 import { MainPageComponent } from './pages/main-pages.component';
 
 
@@ -12,9 +12,8 @@ import { MainPageComponent } from './pages/main-pages.component';
     MainPageComponent
   ],
 
-  /* imports: [
+  imports: [
     CommonModule
-  ], */
-
+  ]
 })
 export class DbzModule { }
