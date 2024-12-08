@@ -1,2 +1,15 @@
-<h1>DBZ main page</h1>
-<!-- tarea: el mensaje que esta en el h1, tiene que aparecer en la pagina principal -->
+<h1>DBZ personajes</h1>
+<hr>
+<div class="row">
+  <div class="col">
+
+    <app-dbz-list [characterList]="dbzService.characters"
+                  (onDelete)="dbzService.deleteCharacterById($event)"></app-dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <app-dbz-add-character (onNewCharacter)="dbzService.($event)"></app-dbz-add-character>
+  </div>
+</div>
